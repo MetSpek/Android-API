@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/bnw', [App\Http\Controllers\ArtPromptController::class, 'bnw']);
+Route::get('/znw', [App\Http\Controllers\ArtPromptController::class, 'znw']);
